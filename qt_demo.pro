@@ -25,6 +25,13 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
+include($$PWD/pri_dialog/pri_dialog.pri)
+include($$PWD/pri_dialogui/pri_dialogui.pri)
+
+INCLUDEPATH += $$PWD
+INCLUDEPATH += $$PWD/pri_dialog
+INCLUDEPATH += $$PWD/pri_dialogui
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
